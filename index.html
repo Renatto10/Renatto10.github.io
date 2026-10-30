@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Renatto Briceño — Perfil Profesional TI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1A3A5C;
+      --blue: #2E86C1;
+      --blue-light: #EBF5FB;
+      --white: #FFFFFF;
+      --off: #F7F8FA;
+      --gray: #6B7280;
+      --dark: #1F2937;
+      --border: #E5E7EB;
+      --green: #1E8449;
+      --green-light: #EAFAF1;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--white);
+      padding: 5rem 2rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--gray);
+      font-weight: 400;
+      max-width: 560px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .chip {
+      background: var(--off);
+      border: 1px solid var(--border);
+      color: var(--dark);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.75rem 1.8rem;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: #142e4a;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      padding: 0.75rem 1.8rem;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid var(--navy);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* STATS BAR */
+    .stats {
+      background: var(--navy);
+      padding: 1.5rem 2rem;
+    }
+
+    .stats-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 3.5rem 2rem;
+    }
+
+    section:nth-child(even) {
+      background: var(--off);
+    }
+
+    .section-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-line {
+      width: 36px;
+      height: 3px;
+      background: var(--blue);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    /* SOBRE MI */
+    .about-text {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 680px;
+    }
+
+    /* EXPERIENCIA */
+    .exp-item {
+      border-left: 3px solid var(--blue);
+      padding-left: 1.4rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .exp-item::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--blue);
+      border-radius: 50%;
+      position: absolute;
+      left: -6.5px;
+      top: 6px;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-company {
+      font-size: 0.88rem;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-date {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-bottom: 0.8rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .exp-bullets li {
+      font-size: 0.9rem;
+      color: var(--gray);
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .exp-bullets li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* HABILIDADES */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-group h4 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .skill-item {
+      margin-bottom: 0.85rem;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .skill-level {
+      font-size: 0.78rem;
+      color: var(--gray);
+    }
+
+    .skill-bar {
+      height: 5px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: var(--blue);
+      border-radius: 3px;
+      transition: width 1s ease;
+    }
+
+    /* CERTIFICACIONES */
+    .certs-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .cert-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      background: var(--white);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .cert-card.green {
+      border-left-color: var(--green);
+      background: var(--green-light);
+    }
+
+    .cert-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cert-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .cert-issuer {
+      font-size: 0.84rem;
+      color: var(--gray);
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-meta {
+      font-size: 0.78rem;
+      color: var(--blue);
+      font-weight: 500;
+    }
+
+    .cert-card.green .cert-meta {
+      color: var(--green);
+    }
+
+    /* FORMACION */
+    .edu-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .edu-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .edu-title {
+      font-weight: 700;
+      font-size: 0.97rem;
+      color: var(--navy);
+      margin-bottom: 0.1rem;
+    }
+
+    .edu-school {
+      font-size: 0.85rem;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .edu-date {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-badge {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    /* CV DOWNLOAD */
+    .download-section {
+      background: var(--navy);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .download-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .download-section h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .download-section p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--white);
+      color: var(--navy);
+      padding: 0.9rem 2.2rem;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    /* CONTACTO */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .contact-item:hover {
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .contact-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      color: var(--gray);
+      font-weight: 500;
+      margin-bottom: 0.1rem;
+    }
+
+    .contact-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 3.5rem 1.2rem 2.5rem;
+      }
+
+      section {
+        padding: 2.5rem 1.2rem;
+      }
+
+      .stats {
+        padding: 1.2rem;
+      }
+
+      .download-section {
+        padding: 2.5rem 1.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skill-fill {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Renatto Briceño</span>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="hero-tag">Disponible para prácticas · Lima, Perú</span>
+      <h1>Renatto Joselito<br>Briceño Ordoñez</h1>
+      <p class="hero-sub">Estudiante de Ingeniería de Sistemas de Información con enfoque en soporte TI, redes y
+        desarrollo web. Desarrollé dos proyectos propios en GitHub: un sistema Help Desk y un monitor de red.
+        Certificado en CCNA y Desarrollo Web & Soporte de Sistemas.</p>
+      <div class="hero-chips">
+        <span class="chip">Soporte TI</span>
+        <span class="chip">Redes & CCNA</span>
+        <span class="chip">Desarrollo Web</span>
+        <span class="chip">SQL & Bases de Datos</span>
+        <span class="chip">Windows 10 / 11</span>
+        <span class="chip">VPN & Accesos</span>
+        <span class="chip">Python · Flask</span>
+        <span class="chip">Git & GitHub</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">📬 Contactar</a>
+        <a href="#certificaciones" class="btn-secondary">🏅 Ver certificaciones</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">17.76</div>
+        <div class="stat-label">Promedio acumulado</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">150/600</div>
+        <div class="stat-label">Orden de mérito ISIL</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">832h</div>
+        <div class="stat-label">Cert. Desarrollo Web & Soporte</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Certificaciones técnicas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi">
+    <div class="section-inner">
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="section-line"></div>
+      <p class="about-text">
+        Soy estudiante de Ingeniería de Sistemas de Información en ISIL, con formación complementaria como egresado de
+        Comunicación Estratégica. Cuento con experiencia en soporte TI freelance — desde configuración de redes y VPN
+        hasta atención de tickets y capacitaciones a usuarios — lo que me permite llegar a un entorno de trabajo ya con
+        práctica real.<br><br>
+        Me interesan especialmente las áreas donde la tecnología resuelve problemas concretos: soporte técnico, redes,
+        desarrollo web y gestión de sistemas. Soy proactivo, aprendo rápido y trabajo bien en equipo. Disponibilidad
+        inmediata para prácticas en modalidad presencial o híbrida en Lima.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="section-inner">
+      <h2 class="section-title">Proyectos</h2>
+      <div class="section-line"></div>
+      <div style="display:grid; gap:1rem;">
+
+        <div
+          style="border:1px solid var(--border); border-left:4px solid var(--blue); border-radius:var(--radius); padding:1.4rem; background:var(--white);">
+          <div
+            style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.5rem;">
+            <div>
+              <div style="font-weight:700; font-size:1rem; color:var(--navy); margin-bottom:0.2rem;">Sistema Help Desk —
+                Gestión de Tickets</div>
+              <div style="font-size:0.82rem; font-weight:600; color:var(--blue);">Python · Flask · SQL · SQLite</div>
+            </div>
+            <a href="https://github.com/Renatto10/helpdesk" target="_blank"
+              style="display:inline-flex; align-items:center; gap:0.4rem; background:var(--navy); color:white; font-size:0.78rem; font-weight:600; padding:0.35rem 0.9rem; border-radius:20px; text-decoration:none;">
+              🔗 Ver en GitHub
+            </a>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.35rem; margin-top:0.8rem;">
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Aplicación web con roles de usuario, técnico y administrador, y control de acceso validado en el servidor
+            </li>
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Flujo de estados, asignación de técnicos, comentarios y dashboard de métricas (tiempo promedio de
+              resolución, tickets por prioridad y categoría)
+            </li>
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Documenté 10 casos de prueba funcionales y de seguridad, incluida protección CSRF
+            </li>
+          </ul>
+        </div>
+
+        <div
+          style="border:1px solid var(--border); border-left:4px solid var(--blue); border-radius:var(--radius); padding:1.4rem; background:var(--white);">
+          <div
+            style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.5rem;">
+            <div>
+              <div style="font-weight:700; font-size:1rem; color:var(--navy); margin-bottom:0.2rem;">Monitor de Red
+              </div>
+              <div style="font-size:0.82rem; font-weight:600; color:var(--blue);">Python</div>
+            </div>
+            <a href="https://github.com/Renatto10/monitor-red" target="_blank"
+              style="display:inline-flex; align-items:center; gap:0.4rem; background:var(--navy); color:white; font-size:0.78rem; font-weight:600; padding:0.35rem 0.9rem; border-radius:20px; text-decoration:none;">
+              🔗 Ver en GitHub
+            </a>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.35rem; margin-top:0.8rem;">
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Herramienta que verifica disponibilidad de equipos y servicios (ping y puertos TCP) con revisión en
+              paralelo
+            </li>
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Historial en CSV, cálculo de disponibilidad por equipo y alertas por cambio de estado en modo continuo
+            </li>
+            <li style="font-size:0.9rem; color:var(--gray); padding-left:1rem; position:relative;">
+              <span style="position:absolute; left:0; color:var(--blue); font-weight:700;">·</span>
+              Documenté 11 casos de prueba; no requiere librerías externas
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="section-inner">
+      <h2 class="section-title">Experiencia</h2>
+      <div class="section-line"></div>
+
+      <div class="exp-item">
+        <div class="exp-title">Soporte de TI</div>
+        <div class="exp-company">Freelance · Lima, Perú</div>
+        <div class="exp-date">2023 – Actualidad</div>
+        <ul class="exp-bullets">
+          <li>Configuración de routers y dispositivos de red para usuarios y pequeñas empresas</li>
+          <li>Implementación y manejo de VPN para acceso remoto seguro</li>
+          <li>Instalación y configuración de Windows 10 y 11 desde cero</li>
+          <li>Gestión de accesos y permisos de usuario en entornos locales</li>
+          <li>Mantenimiento preventivo y correctivo de equipos de cómputo</li>
+          <li>Atención de tickets y resolución de incidencias de primer nivel</li>
+          <li>Capacitaciones básicas a usuarios sobre uso de herramientas y sistemas</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-title">Practicante de Comunicaciones</div>
+        <div class="exp-company">NEONHOUSELED SAC · Lima, Perú</div>
+        <div class="exp-date">ago. 2025 – dic. 2025 · 5 meses</div>
+        <ul class="exp-bullets">
+          <li>Diseño y gestión de piezas digitales para comunicaciones internas</li>
+          <li>Uso de herramientas de productividad en entorno corporativo (Office 365, Drive)</li>
+          <li>Apoyo en actividades de cultura organizacional y reportes de gestión</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-title">Asesor de Experiencia al Cliente</div>
+        <div class="exp-company">Cineplanet · Lima, Perú</div>
+        <div class="exp-date">dic. 2022 – dic. 2024 · 2 años 1 mes</div>
+        <ul class="exp-bullets">
+          <li>Atención al cliente y resolución de problemas en tiempo real</li>
+          <li>Manejo de sistemas internos de registro y control operativo</li>
+          <li>Comunicación efectiva con público diverso bajo entornos de alta demanda</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <div class="section-inner">
+      <h2 class="section-title">Habilidades técnicas</h2>
+      <div class="section-line"></div>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h4>Soporte & Redes</h4>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Redes TCP/IP & CCNA</span><span
+                class="skill-level">Intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:65%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Configuración de routers & VPN</span><span
+                class="skill-level">Intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:65%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Windows 10/11 (inst. & config.)</span><span
+                class="skill-level">Avanzado</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Mantenimiento de equipos</span><span
+                class="skill-level">Avanzado</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Desarrollo & Datos</h4>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">HTML & CSS</span><span
+                class="skill-level">Básico-intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:55%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">SQL · SQLite</span><span
+                class="skill-level">Básico-intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:55%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Python · Flask</span><span
+                class="skill-level">Básico-intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:50%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Git & GitHub</span><span
+                class="skill-level">Básico-intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:55%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Excel (tablas dinámicas)</span><span
+                class="skill-level">Intermedio</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES -->
+  <section id="certificaciones">
+    <div class="section-inner">
+      <h2 class="section-title">Certificaciones</h2>
+      <div class="section-line"></div>
+      <div class="certs-grid">
+
+        <div class="cert-card green">
+          <div class="cert-icon">🏆</div>
+          <div>
+            <div class="cert-title">Certificado Modular — Desarrollo Web y Soporte de Sistemas</div>
+            <div class="cert-issuer">ISIL · Arquitectura de Plataformas y Servicios de TI</div>
+            <div class="cert-meta">25 Jul 2026 · 40 créditos · 832 horas · Reg: Nº 70874251-202610-CAPTI-1</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <div>
+            <div class="cert-title">CCNA: Introducción a las Redes</div>
+            <div class="cert-issuer">Cisco Networking Academy · ISIL</div>
+            <div class="cert-meta">26 Jul 2026 · ID: 1683b9d4-7483-4b8b-9057-207623687a72</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">💻</div>
+          <div>
+            <div class="cert-title">IT Essentials</div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+            <div class="cert-meta">Fundamentos de hardware, software y soporte técnico</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🇺🇸</div>
+          <div>
+            <div class="cert-title">English 2 — Participation Award</div>
+            <div class="cert-issuer">Harson University · Miami</div>
+            <div class="cert-meta">19 mayo 2025 · Nivel básico-intermedio</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACION -->
+  <section id="formacion">
+    <div class="section-inner">
+      <h2 class="section-title">Formación académica</h2>
+      <div class="section-line"></div>
+
+      <div class="edu-item">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-title">Ingeniería de Sistemas de Información</div>
+          <div class="edu-school">ISIL — Instituto San Ignacio de Loyola</div>
+          <div class="edu-date">2025 – Actualidad</div>
+          <span class="edu-badge">Promedio 17.76 · Puesto 150/600</span>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-icon">📡</div>
+        <div>
+          <div class="edu-title">Comunicación Estratégica</div>
+          <div class="edu-school">ISIL — Instituto San Ignacio de Loyola</div>
+          <div class="edu-date">Egresado</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CV DOWNLOAD -->
+  <div class="download-section">
+    <div class="download-inner">
+      <h2>¿Te interesa mi perfil?</h2>
+      <p>Descarga mi CV completo con toda mi formación, certificaciones y experiencia en un solo documento listo para
+        compartir.</p>
+      <a href="CV_Renatto_Briceno.pdf" class="btn-download" download>
+        ⬇️ Descargar CV completo
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-inner">
+      <h2 class="section-title">Contacto</h2>
+      <div class="section-line"></div>
+      <div class="contact-grid">
+
+        <a class="contact-item" href="mailto:renattobriceno@gmail.com">
+          <span class="contact-icon">📧</span>
+          <div>
+            <div class="contact-label">Correo electrónico</div>
+            <div class="contact-value">renattobriceno@gmail.com</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="tel:+51957450445">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-label">Teléfono / WhatsApp</div>
+            <div class="contact-value">(+51) 957 450 445</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="www.linkedin.com/in/renattobriceñoordoñez" target="_blank">
+          <span class="contact-icon">💼</span>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">www.linkedin.com/in/renattobriceñoordoñez</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://github.com/Renatto10" target="_blank">
+          <span class="contact-icon">🐙</span>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/Renatto10</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Ubicación</div>
+            <div class="contact-value">Santiago de Surco, Lima</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Renatto Joselito Briceño Ordoñez · Disponible para prácticas en Lima</p>
+  </footer>
+
+</body>
+
+</html>
